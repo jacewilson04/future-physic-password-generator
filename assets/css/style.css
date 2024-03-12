@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+html {
+    background-image: url("../images/theconsole.jpg");
+}
+
+body {
+    height: 100%;
+}
+
+main {
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    height: 100%;
+}
+
+/*Create a button that appears in the center of the screen*/
+/*Perhaps in the future we can make react to input*/
+#passwordButton {
+    background-color: #C391FD;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+
+    margin-top: 60%;
+    left: 50%;
+}
+
+/*Define the animations to be used for the floating objects */
+@keyframes jump {
+    0% {top: 5%; left: 5%;}
+    /* When text floating text aprouches the screen edges it will make them expand fix later*/
+    25% {top: 90%; left: 5%;}
+    50% {top: 90%; left: 85%;}
+    75% {top: 5%; left: 85%;}
+    100% {top: 5%; left: 5%;}
+}
+
+@keyframes flash {
+    from {color: #3603CC;}
+    to {color: green;}
+}
+
+.float {
+    color: purple;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    text-align: center;
+    display: flex;
+    background-color: #3603CC;
+
+    /*apply the animations*/
+    position: absolute;
+    animation: jump 10s, flash 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
